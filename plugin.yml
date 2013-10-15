@@ -1,0 +1,13 @@
+name: SQLBan
+main: rimidalv111.SQLBan.SQLBan
+author: rimidalv111
+version: 1.1
+commands:
+  ban:
+    description: Ban a player and his IP!
+  unban:
+    description: Unban a banned player.
+  baninfo:
+    description: Get info on any player and their state.
+  permban:
+    description: Permenatly ban a player and his IP.
