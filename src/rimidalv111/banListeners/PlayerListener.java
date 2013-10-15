@@ -1,6 +1,7 @@
 package rimidalv111.banListeners;
 
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -75,7 +76,8 @@ public class PlayerListener implements Listener
 					}
 				}
 			}
-			pid.setIp(event.getAddress().getHostAddress());
+			String playerIP = event.getKickMessage();
+			pid.setIp(playerIP);
 			plugin.getDatabase().save(pid);
 			//let through
 		}
