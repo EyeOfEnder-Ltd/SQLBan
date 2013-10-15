@@ -85,6 +85,10 @@ public class SQLBan extends JavaPlugin
 	
 	public String timeLeft(PlayerInfoDatabase pid)
 	{
+		if(pid.getDatetounban().equalsIgnoreCase("null") || pid.getDatetounban().equalsIgnoreCase("never"))
+		{
+			return "null";
+		}
 		Date today = new Date();
 		Date toUnbanOn = null;
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-hh:mm-aaa");
